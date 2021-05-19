@@ -16,10 +16,16 @@ void    put(char *str)
 void    ft_tolowerTest1(void)
 {
     put("---------------- Test #1 ----------------\n\n");
-    char input[] = "abcdefghijklmnopqrstuvwxyz";
-    char expOutput = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    char expOutput[] = "abcdefghijklmnopqrstuvwxyz";
+    char input[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     put("Convirtiendo: "); put(input); put(" en "); put(expOutput);
     put("\n");
-    char XD[] = ft_tolower(input);
-    put("Resultado: "); put(XD);
+    char *XD = ft_tolower(input);
+    put(XD);
+    put("Resultado: "); put(input);
+}
+
+int main(void)
+{
+    ft_tolowerTest1();
 }

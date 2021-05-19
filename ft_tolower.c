@@ -1,12 +1,13 @@
-
-
 char    *ft_tolower(char *str)
 {
     char *ref;
 
     ref = str;
-    while (*++ref != '\0')
+    while (*ref)
+    {
         if (*ref >= 'A' && *ref <= 'Z')
-            *ref = *ref + '32';
+            *ref = *ref + 'a';
+        ref++;
+    }
     return (str);
 }
