@@ -6,6 +6,9 @@
 
 void    ft_putstr(char *str);
 char    *ft_tolower(char *str);
-int     isascii(int c);
+char	*ft_toupper(char *str);
+int     ft_isascii(int c);
+int	ft_strlen(char *str);
+int	ft_atoi(char *str);
 
 #endif

@@ -15,14 +15,26 @@ void    put(char *str)
 
 void    ft_tolowerTest1(void)
 {
-    put("---------------- Test #1 ----------------\n\n");
     char expOutput[] = "abcdefghijklmnopqrstuvwxyz";
     char input[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    char funcName[] = "ft_tolower";
+    put("---------------- Test #1 ----------------\n\n");
+
+    put("Testeando: "); put(funcName);
     put("Convirtiendo: "); put(input); put(" en "); put(expOutput);
     put("\n");
     char *XD = ft_tolower(input);
     put(XD);
     put("Resultado: "); put(input);
+    put("---------------- Test #1 ----------------\n\n");
+}
+
+void	ft_toupperTest2(void)
+{
+    char expOutput[] = "abcdefghijklmnopqrstuvwxyz";
+    char input[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    char funcName[] = "ft_tolower";
+
 }
 
 int main(void)
