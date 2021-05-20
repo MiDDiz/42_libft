@@ -1,10 +1,22 @@
-char    *ft_toupper(char *str)
-{
-    char *ref;
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jnaftana <jnaftana@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/05/20 16:30:35 by jnaftana          #+#    #+#             */
+/*   Updated: 2021/05/20 16:30:35 by jnaftana         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-    ref = str;
-    while (*++ref != '\0')
-        if (*ref >= 'a' && *ref <= 'z')
-            *ref = *ref - 'a';
-    return (str);
+char	*ft_toupper(char *str)
+{
+	char	*ref;
+
+	ref = str;
+	while (*++ref != '\0')
+		if (*ref >= 'a' && *ref <= 'z')
+			*ref = *ref - 'a';
+	return (str);
 }

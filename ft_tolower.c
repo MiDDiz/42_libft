@@ -1,13 +1,25 @@
-char    *ft_tolower(char *str)
-{
-    char *ref;
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jnaftana <jnaftana@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/05/20 16:30:00 by jnaftana          #+#    #+#             */
+/*   Updated: 2021/05/20 16:30:00 by jnaftana         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-    ref = str;
-    while (*ref)
-    {
-        if (*ref >= 'A' && *ref <= 'Z')
-            *ref = *ref + 'a';
-        ref++;
-    }
-    return (str);
+char	*ft_tolower(char *str)
+{
+	char	*ref;
+
+	ref = str;
+	while (*ref)
+	{
+		if (*ref >= 'A' && *ref <= 'Z')
+			*ref = *ref + 'a';
+		ref++;
+	}
+	return (str);
 }
