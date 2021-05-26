@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jnaftana <jnaftana@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 16:22:47 by jnaftana          #+#    #+#             */
-/*   Updated: 2021/05/20 16:23:36 by jnaftana         ###   ########.fr       */
+/*   Updated: 2021/05/25 18:53:06 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_atoi(char *str)
 	int	res;
 
 	neg = 1;
-	res = res;
+	res = 0;
 	while (*str && (*str == ' ' || *str == '\t' || *str == '\v'
 			|| *str == '\n' || *str == '\f' || *str == '\r'))
 		str++;

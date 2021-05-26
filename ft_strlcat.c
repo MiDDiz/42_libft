@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jnaftana <jnaftana@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/21 17:51:47 by jnaftana          #+#    #+#             */
-/*   Updated: 2021/05/20 16:52:43 by jnaftana         ###   ########.fr       */
+/*   Updated: 2021/05/25 18:58:47 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 	return (d_size + c_src);
 }
 
-
+/*
 int	main(void)
 {
 	char *a = "This is sourceeeeee3";
@@ -59,3 +59,4 @@ int	main(void)
 	printf("%s\n", dt);
 	return (0);
 }
+*/

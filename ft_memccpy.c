@@ -1,8 +1,8 @@
 #include "libft.h"
-#include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
-
+//#include <stdlib.h>
+//#include <string.h>
+//#include <stdio.h>
+//
 void    *ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
    while(n++)
@@ -14,9 +14,10 @@ void    *ft_memccpy(void *dest, const void *src, int c, size_t n)
        }
        *((char *)dest++) = *((char *)src);
        src++;
-   } 
+   }
+   return (NULL);
 }
-
+/*
 int main(void)
 {
     char t[] = "Esto es una prueba";
@@ -25,4 +26,4 @@ int main(void)
     char *x = ft_memccpy(d, t, 'e', 10);
     printf("Source is: %p with value of %s\nDest is: %p with value of %s\nReturned is: %p with value of %s", t, t, d, d, x, x);
     return 0;
-}
+}*/
