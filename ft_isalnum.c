@@ -6,7 +6,7 @@
 /*   By: jnaftana <jnaftana@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 16:22:54 by jnaftana          #+#    #+#             */
-/*   Updated: 2021/05/20 16:25:34 by jnaftana         ###   ########.fr       */
+/*   Updated: 2021/05/26 14:50:35 by jnaftana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 int	ft_isalnum(int c)
 {
-	return (ft_isalpha(c) || ft_isnum(c));
+	return (ft_isalpha(c) || ft_isdigit(c));
 }
