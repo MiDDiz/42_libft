@@ -6,15 +6,17 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 16:22:47 by jnaftana          #+#    #+#             */
-/*   Updated: 2021/05/25 18:53:06 by marvin           ###   ########.fr       */
+/*   Updated: 2021/06/11 14:27:44 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *const_s)
 {
 	int	neg;
 	int	res;
+	char *str;
 
+	str = (char *)const_s;
 	neg = 1;
 	res = 0;
 	while (*str && (*str == ' ' || *str == '\t' || *str == '\v'

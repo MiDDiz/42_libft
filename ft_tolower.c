@@ -9,17 +9,11 @@
 /*   Updated: 2021/05/20 16:30:00 by jnaftana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
-char	*ft_tolower(char *str)
+int	ft_tolower(int chr)
 {
-	char	*ref;
-
-	ref = str;
-	while (*ref)
-	{
-		if (*ref >= 'A' && *ref <= 'Z')
-			*ref = *ref + 'a';
-		ref++;
-	}
-	return (str);
+	if (chr >= 'A' && chr <= 'Z')
+		return (chr + 32);
+	return (chr);
 }

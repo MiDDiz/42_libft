@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jnaftana <jnaftana@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/16 12:44:02 by jnaftana          #+#    #+#             */
-/*   Updated: 2021/05/20 16:50:48 by jnaftana         ###   ########.fr       */
+/*   Updated: 2021/06/11 14:24:32 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//We return offset + 1 to srcIsEmpy to store the size of src.
-//Untested post piscine!!
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
+#include "libft.h"
+
+size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
 	int unsigned	offset;
 	int unsigned	size_src;

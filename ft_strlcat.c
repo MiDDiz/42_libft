@@ -6,23 +6,36 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/21 17:51:47 by jnaftana          #+#    #+#             */
-/*   Updated: 2021/05/25 18:58:47 by marvin           ###   ########.fr       */
+/*   Updated: 2021/06/11 20:16:56 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
-//ESTO DA SEGFAULT COMPROBAR ANTES!!
-
-unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
+size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
-	unsigned int	d_size;
-	unsigned int	c_src;
+	int off_dest;
+	int off_src;
+
+	off_dest = 0;
+	off_src = 0;
+	while (*(dest + off_dest) && size--)
+		off_dest++;
+	while (size-- > 0)
+		*(char *)(src + off_src++) = *(dest + off_dest++);
+	*(char *)(src + off_src) = 0;
+	return (off_dest + 1);
+}
+
+/*
+size_t	ft_strlcat(char *dest, const char *src, size_t size)
+{
+	size_t	d_size;
+	size_t	c_src;
 
 	c_src = 0;
 	d_size = 0;
-	while (*dest)
+	while (*dest )
 	{
 		dest++;
 		d_size++;
@@ -39,24 +52,4 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 	return (d_size + c_src);
 }
 
-/*
-int	main(void)
-{
-	char *a = "This is sourceeeeee3";
-	char d[400];
-	for (int i = 0; i < 20; i++)
-	{
-		d[i] = i + '0';
-	}
-	char dt[400];
-	for (int i = 0; i < 20; i++)
-	{
-		dt[i] = i + '0';
-	}
-	ft_strlcat(d, a, 22);
-	printf("%s\n", d);
-	strlcat(dt, a, 22);
-	printf("%s\n", dt);
-	return (0);
-}
 */

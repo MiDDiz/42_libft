@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jnaftana <jnaftana@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 16:22:52 by jnaftana          #+#    #+#             */
-/*   Updated: 2021/05/20 16:23:37 by jnaftana         ###   ########.fr       */
+/*   Updated: 2021/06/11 14:01:58 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,9 @@
 
 void	ft_bzero(void *addr, size_t len)
 {
+	char *ptr_cast = (char *)addr;
 	while (len--)
-		*((char *)addr++) = 0;
+		*ptr_cast++ = 0;
 }
 
 /*

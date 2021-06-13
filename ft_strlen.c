@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jnaftana <jnaftana@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 16:29:33 by jnaftana          #+#    #+#             */
-/*   Updated: 2021/05/20 16:29:54 by jnaftana         ###   ########.fr       */
+/*   Updated: 2021/06/11 14:17:34 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+int	ft_strlen(const char *str)
 {
 	int	c;
 

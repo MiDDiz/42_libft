@@ -9,14 +9,11 @@
 /*   Updated: 2021/05/20 16:30:35 by jnaftana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
-char	*ft_toupper(char *str)
+int	ft_toupper(int chr)
 {
-	char	*ref;
-
-	ref = str;
-	while (*++ref != '\0')
-		if (*ref >= 'a' && *ref <= 'z')
-			*ref = *ref - 'a';
-	return (str);
+	if (chr >= 'a' && chr <= 'z')
+		return (chr - 32);
+	return (chr);
 }

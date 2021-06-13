@@ -16,16 +16,20 @@
 //#include <string.h>
 void    *ft_memmove(void *dest, const void *src, size_t n)
 {
-    char    *ptr;
+    char    *ptr_dest;
+    char	*ptr_src;
 
-    ptr = dest;
-    if (dest > src)
+    if (!dest && !src)
+		return (dest);
+    ptr_dest = ((char *)dest);
+    ptr_src = ((char *)src);
+    if (ptr_dest > ptr_src)
         while (n--)
-            *((char *)dest + n) = *((char *)src + n);
+            *(ptr_dest + n) = *(ptr_src + n);
     else
         while (n--)
-            *((char *)dest++) = *((char *)src++);
-    return (ptr);
+            *ptr_dest++ = *ptr_src++;
+    return (dest);
 }
 
 /*
