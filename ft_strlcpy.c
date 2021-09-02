@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/16 12:44:02 by jnaftana          #+#    #+#             */
-/*   Updated: 2021/06/11 14:24:32 by marvin           ###   ########.fr       */
+/*   Updated: 2021/08/31 13:13:38 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,16 +34,3 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	}
 	return (size_src);
 }
-/*
-#include <string.h>
-int	main(void)
-{
-	char *a = "Cadena inicio";
-	char b[200];
-	char c[200];
-
-	strlcpy(b, a, 0);
-	printf("%s\n", b);
-	ft_strlcpy(c, a, 0);
-	printf("%s\n", c);
-}*/
