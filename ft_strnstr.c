@@ -8,8 +8,9 @@
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	char *ptr_big;
-	char *ptr_little;
+	char	*ptr_big;
+	char	*ptr_little;
+
 	while(*big && len--)
 	{
 		if (*big == *little)
