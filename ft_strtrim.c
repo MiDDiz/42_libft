@@ -20,6 +20,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		ptr_str = (char *)s1;
 	if (ft_strnstr(ft_strrchr(s1, *set), set, set_len))
 		new_str_len -= set_len;
-	new_str = malloc((char *)sizeof(char) * (new_str_len + 1));
+	new_str = (char *)malloc(sizeof(char) * (new_str_len + 1));
 	ft_strlcpy(new_str, ptr_str, new_str_len + 1);
+	return(new_str);
 }

@@ -11,6 +11,8 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	char	*ptr_big;
 	char	*ptr_little;
 
+	if (!*little || !len || big == little)
+		return ((char *)big);
 	while(*big && len--)
 	{
 		if (*big == *little)
@@ -24,7 +26,8 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 				ptr_little++;
 				ptr_big++;
 			}
-			if (*ptr_little == 0)
+			if ((*ptr_little == 0 )
+				&& (ptr_big - big + ft_strlen(little) <= (long)len))
 				return ((char *)big);
 		}
 		big++;

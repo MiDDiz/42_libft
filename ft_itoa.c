@@ -37,6 +37,8 @@ char	*ft_itoa(int n)
 	char *str;
 
 	str = ft_calloc(11, sizeof(char));
+	if (!str)
+		return (NULL);
 	ft_itoa_rec(n, str);
 	return(str);
 }
