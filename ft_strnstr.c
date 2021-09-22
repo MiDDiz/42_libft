@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jnaftana <jnaftana@student.42madrid.es>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/09/22 18:26:25 by jnaftana          #+#    #+#             */
+/*   Updated: 2021/09/22 18:26:25 by jnaftana         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 /*
      The strnstr() function locates the	first occurrence of the	null-termi-
      nated string little in the	string big, where not more than	len characters
@@ -13,7 +25,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 
 	if (!*little || !len || big == little)
 		return ((char *)big);
-	while(*big && len--)
+	while (*big && len--)
 	{
 		if (*big == *little)
 		{
@@ -22,12 +34,12 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 			while (*ptr_little)
 			{
 				if (*ptr_little != *ptr_big)
-					break;
+					break ;
 				ptr_little++;
 				ptr_big++;
 			}
 			if ((*ptr_little == 0 )
-				&& (ptr_big - big + ft_strlen(little) <= (long)len))
+				&& (ptr_big - big + ft_strlen(little) <= len))
 				return ((char *)big);
 		}
 		big++;

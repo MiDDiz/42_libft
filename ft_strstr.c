@@ -3,15 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jnaftana <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jnaftana <jnaftana@student.42madrid.es>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/21 17:15:41 by jnaftana          #+#    #+#             */
-/*   Updated: 2021/04/21 17:15:43 by jnaftana         ###   ########.fr       */
+/*   Updated: 2021/09/22 18:27:08 by jnaftana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-//#include <stdio.h>
-//#include <string.h>
 
 int	compare_on_site(char *str, char *to_find)
 {
@@ -44,16 +41,3 @@ char	*ft_strstr(char *str, char *to_find)
 	}
 	return (0);
 }
-
-/*
-int	main(void)
-{
-	char *a = "Foo Bar Baz";
-	char *b = "Bar";
-	char *ptr;
-	char *ptr2;
-	
-	printf("%s\n", strstr(a, b));
-	printf("%s\n", ft_strstr(a, b));
-}
-*/

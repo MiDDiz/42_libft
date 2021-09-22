@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jnaftana <jnaftana@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jnaftana <jnaftana@student.42madrid.es>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/20 16:30:35 by jnaftana          #+#    #+#             */
-/*   Updated: 2021/05/20 16:30:35 by jnaftana         ###   ########.fr       */
+/*   Created: 2021/09/22 18:30:09 by jnaftana          #+#    #+#             */
+/*   Updated: 2021/09/22 18:30:09 by jnaftana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 int	ft_toupper(int chr)

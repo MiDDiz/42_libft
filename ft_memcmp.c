@@ -23,7 +23,7 @@ int	ft_memcmp(const void *str1, const void *str2, size_t n)
 	{
 		if (*ptr_str1 != *ptr_str2)
 			return (*ptr_str1 - *ptr_str2);
-		ptr_str1++; 
+		ptr_str1++;
 		ptr_str2++;
 	}
 	return (0);

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jnaftana <jnaftana@student.42madrid.es>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/09/22 18:13:38 by jnaftana          #+#    #+#             */
+/*   Updated: 2021/09/22 18:13:38 by jnaftana         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 /*
@@ -7,12 +19,12 @@
 
 static void	ft_itoa_rec(int n, char *str)
 {
-	char ch;
+	char	ch;
 
 	if (n == -2147483648)
 	{
 		ft_strlcpy(str, "-2147483648", 12);
-		return;
+		return ;
 	}
 	if (n < 0)
 	{
@@ -34,11 +46,11 @@ static void	ft_itoa_rec(int n, char *str)
 
 char	*ft_itoa(int n)
 {
-	char *str;
+	char	*str;
 
 	str = ft_calloc(11, sizeof(char));
 	if (!str)
 		return (NULL);
 	ft_itoa_rec(n, str);
-	return(str);
+	return (str);
 }

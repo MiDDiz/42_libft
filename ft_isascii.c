@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jnaftana <jnaftana@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jnaftana <jnaftana@student.42madrid.es>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/20 16:23:01 by jnaftana          #+#    #+#             */
-/*   Updated: 2021/05/20 16:23:01 by jnaftana         ###   ########.fr       */
+/*   Created: 2021/09/22 18:13:22 by jnaftana          #+#    #+#             */
+/*   Updated: 2021/09/22 18:13:22 by jnaftana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 int	ft_isascii(int c)
 {
 	return (0 <= c && c <= 127);

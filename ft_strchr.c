@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jnaftana <jnaftana@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jnaftana <jnaftana@student.42madrid.es>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/26 14:47:37 by jnaftana          #+#    #+#             */
-/*   Updated: 2021/05/26 14:47:37 by jnaftana         ###   ########.fr       */
+/*   Created: 2021/09/22 18:21:45 by jnaftana          #+#    #+#             */
+/*   Updated: 2021/09/22 18:21:45 by jnaftana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	char *str;
-	
+	char	*str;
+
 	str = (char *)s;
 	while (*str)
 	{
@@ -24,6 +24,6 @@ char	*ft_strchr(const char *s, int c)
 		str++;
 	}
 	if (*str == c)
-			return (str);
+		return (str);
 	return (NULL);
 }

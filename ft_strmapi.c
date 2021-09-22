@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jnaftana <jnaftana@student.42madrid.es>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/09/22 18:25:24 by jnaftana          #+#    #+#             */
+/*   Updated: 2021/09/22 18:25:24 by jnaftana         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
@@ -17,5 +29,5 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		index++;
 	}
 	new_str[index] = 0;
-	return (new_str); 
+	return (new_str);
 }

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jnaftana <jnaftana@student.42madrid.es>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/09/22 18:13:00 by jnaftana          #+#    #+#             */
+/*   Updated: 2021/09/22 18:13:00 by jnaftana         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 /*
 	The C library function void *calloc(size_t nitems, size_t size) 
 	allocates the requested memory and returns a pointer to it. 
@@ -6,9 +18,9 @@
 */
 #include "libft.h"
 
-void *ft_calloc(size_t nitems, size_t size)
+void	*ft_calloc(size_t nitems, size_t size)
 {
-	void*	allocation;
+	void	*allocation;
 	size_t	len;
 
 	len = nitems * size;
@@ -16,5 +28,5 @@ void *ft_calloc(size_t nitems, size_t size)
 	if (allocation == NULL)
 		return (allocation);
 	ft_bzero(allocation, len);
-	return(allocation);
+	return (allocation);
 }

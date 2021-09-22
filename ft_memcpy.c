@@ -3,14 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: jnaftana <jnaftana@student.42madrid.es>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 16:22:09 by jnaftana          #+#    #+#             */
-/*   Updated: 2021/06/09 11:55:34 by marvin           ###   ########.fr       */
+/*   Updated: 2021/09/22 18:16:10 by jnaftana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//Untested!
 #include "libft.h"
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)

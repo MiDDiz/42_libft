@@ -3,16 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: jnaftana <jnaftana@student.42madrid.es>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/21 17:51:47 by jnaftana          #+#    #+#             */
-/*   Updated: 2021/08/31 13:12:48 by marvin           ###   ########.fr       */
+/*   Updated: 2021/09/22 18:24:40 by jnaftana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-// Prone to segfault!!
 
 size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
@@ -21,7 +19,7 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 
 	index = 0;
 	dest_size = 0;
-	while (*dest )
+	while (*dest)
 	{
 		dest++;
 		dest_size++;
