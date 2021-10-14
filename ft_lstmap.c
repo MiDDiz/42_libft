@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jnaftana <jnaftana@student.42madrid.es>    +#+  +:+       +#+        */
+/*   By: jnaftana <jnaftana@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/25 11:23:11 by jnaftana          #+#    #+#             */
-/*   Updated: 2021/10/04 12:30:59 by jnaftana         ###   ########.fr       */
+/*   Updated: 2021/10/14 16:36:13 by jnaftana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,8 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 			ft_lstclear(&head, (*del));
 			return (head);
 		}
-	lst = lst->next;
-	ft_lstadd_back(&head, ptr_helper);
+		lst = lst->next;
+		ft_lstadd_back(&head, ptr_helper);
 	}
 	return (head);
 }
