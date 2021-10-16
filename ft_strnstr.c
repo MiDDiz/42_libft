@@ -39,7 +39,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 				ptr_big++;
 			}
 			if ((*ptr_little == 0 )
-				&& (ptr_big - big + ft_strlen(little) <= len))
+				&& (ft_strlen(little) < len))
 				return ((char *)big);
 		}
 		big++;
