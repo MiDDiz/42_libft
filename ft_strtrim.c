@@ -22,7 +22,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (NULL);
 	ptr_str = (char *)s1;
 	if (!*s1)
-		return (ptr_str);
+		return (ft_strdup(ptr_str));
 	while (*ptr_str && ft_strchr(set, *ptr_str))
 		ptr_str++;
 	size_str = ft_strlen(ptr_str);

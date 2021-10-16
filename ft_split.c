@@ -20,10 +20,22 @@ static size_t	ft_num_substr(char const *s, char c)
 	ptr_str = (char *)s;
 	if (!*s)
 		return (0);
-	num_substr = 1;
+	num_substr = 0;
 	while (*ptr_str++)
+		if (*ptr_str != c)
+			break ;
+	if (!*ptr_str)
+		return (0);
+	num_substr = 1;
+	ptr_str = (char *)s;
+	while (*ptr_str++)
+	{
 		if (*ptr_str == c)
+		{
 			num_substr++;
+			while (*++ptr_str == c && *ptr_str) ;
+		}
+	}
 	return (num_substr);
 }
 
@@ -38,12 +50,12 @@ static void	ft_splitter(char *str, char c, char **table_ptr)
 		{
 			*table_ptr = (char *)malloc(sizeof(char) * (str - ptr_str));
 			ft_strlcpy(*table_ptr++, ptr_str, str - ptr_str + 1);
-			while (*++str == c) ;
+			while (*++str == c && (*str)) ;
 			ptr_str = str;
 		}
 		str++;
 	}
-	*table_ptr = (char *)malloc(sizeof(char) * (str - ptr_str + 1));
+	*table_ptr = (char *)malloc(sizeof(char) * (str - ptr_str));
 	ft_strlcpy(*table_ptr++, ptr_str, str - ptr_str + 1);
 	*table_ptr = NULL;
 }
@@ -58,6 +70,5 @@ char	**ft_split(char const *str, char c)
 		return (NULL);
 	ptr_str = ft_strtrim((char *)str, &c);
 	ft_splitter(ptr_str, c, table_str);
-	free(ptr_str);
 	return (table_str);
 }
