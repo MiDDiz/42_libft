@@ -17,15 +17,20 @@
 */
 #include "libft.h"
 
-char	*ft_strdup(const char *str)
+char	*ft_strdup(const char *src)
 {
-	size_t	len;
-	char	*new_str;
+	char	*output_str;
+	int		i;
 
-	len = ft_strlen(str) + 1;
-	new_str = (char *)malloc(sizeof(char) * len);
-	if (new_str == NULL)
-		return (new_str);
-	ft_strlcpy(new_str, str, len);
-	return (new_str);
+	output_str = (char *) malloc(sizeof (*src) * (ft_strlen(src) + 1));
+	if (!output_str)
+		return (NULL);
+	i = 0;
+	while (src[i] != '\0')
+	{
+		output_str[i] = src[i];
+		i++;
+	}
+	output_str[i] = '\0';
+	return (output_str);
 }

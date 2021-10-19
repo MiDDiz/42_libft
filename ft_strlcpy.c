@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jnaftana <jnaftana@student.42madrid.es>    +#+  +:+       +#+        */
+/*   By: jnaftana <jnaftana@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/16 12:44:02 by jnaftana          #+#    #+#             */
-/*   Updated: 2021/09/22 18:24:54 by jnaftana         ###   ########.fr       */
+/*   Updated: 2021/10/19 16:46:43 by jnaftana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,18 @@
 
 size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
-	int unsigned	offset;
-	int unsigned	size_src;
+	size_t i;
 
-	offset = 0;
-	size_src = 0;
-	while (*(src + size_src) != '\0')
+	i = 0;
+	if (!size)
+		return (ft_strlen(src));
+	if (!dest)
+		return (0);
+	while (i < (size - 1) && src[i])
 	{
-		size_src++;
+		dest[i] = src[i];
+		i++;
 	}
-	if (size != 0)
-	{
-		while (*(src + offset) != 0 && offset < (size - 1))
-		{
-			*(dest + offset) = *(src + offset);
-			offset++;
-		}
-		*(dest + offset) = '\0';
-	}
-	return (size_src);
+	dest[i] = '\0';
+	return (ft_strlen(src));
 }
