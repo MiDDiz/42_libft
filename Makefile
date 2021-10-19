@@ -1,81 +1,38 @@
-NAME = libft.a
+SRCS		= ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c ft_itoa.c ft_memccpy.c ft_memchr.c ft_memcmp.c ft_memcpy.c ft_memmove.c ft_memset.c ft_putchar_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_putstr_fd.c ft_split.c ft_strchr.c ft_strdup.c ft_strjoin.c ft_strlcat.c ft_strlcpy.c ft_strlen.c ft_strmapi.c ft_striteri.c ft_strncmp.c ft_strnstr.c ft_strrchr.c ft_strstr.c ft_strtrim.c ft_substr.c ft_tolower.c ft_toupper.c
+SRCS_B		= ft_lstadd_back.c ft_lstadd_front.c ft_lstclear.c ft_lstdelone.c ft_lstiter.c ft_lstlast.c ft_lstmap.c ft_lstnew.c ft_lstsize.c
 
-FLAGS = -Wall -Wextra -Werror
+OBJS		= ${SRCS:.c=.o}
+OBJS_B		= ${SRCS_B:.c=.o}
 
-SRC = ft_memset.c \
-		ft_bzero.c \
-		ft_memcpy.c \
-		ft_memccpy.c \
-		ft_memmove.c \
-		ft_memchr.c \
-		ft_memcmp.c \
-		ft_strlen.c \
-		ft_strdup.c \
-		ft_strlcpy.c \
-		ft_strlcat.c \
-		ft_strchr.c \
-		ft_strrchr.c \
-		ft_strnstr.c \
-		ft_strncmp.c \
-		ft_atoi.c \
-		ft_isalpha.c \
-		ft_isdigit.c \
-		ft_isalnum.c \
-		ft_isascii.c \
-		ft_isprint.c \
-		ft_toupper.c \
-		ft_tolower.c \
-		ft_calloc.c \
-		ft_substr.c \
-		ft_strjoin.c \
-		ft_strtrim.c \
-		ft_split.c \
-		ft_itoa.c \
-		ft_strmapi.c \
-		ft_putchar_fd.c \
-		ft_putstr_fd.c \
-		ft_putendl_fd.c \
-		ft_putnbr_fd.c	\
-		ft_striteri.c	\
-		ft_strstr.c
+NAME		= libft.a
+NAME_UX		= libft.so
 
-SRC_B = ft_lstnew.c \
-			ft_lstadd_front.c \
-			ft_lstsize.c \
-			ft_lstlast.c \
-			ft_lstadd_back.c \
-			ft_lstdelone.c \
-			ft_lstclear.c \
-			ft_lstiter.c \
-			ft_lstmap.c
+CC			= clang
+RM			= rm -f
 
-OBJ = $(SRC:.c=.o)
+CFLAGS		= -Wall -Wextra -Werror
 
-OBJ_B = $(SRC_B:.c=.o)
+AR			= ar
 
-all: $(NAME)
+RC			= rc
 
-$(OBJ): $(SRC)
-	gcc $(FLAGS) -c $(SRC)
+${NAME}:	${OBJS}
+			${CC} -c ${SRCS}
+			${AR} ${RC} ${NAME} ${OBJS}
 
-$(NAME): $(OBJ)
-	ar rcs $(NAME) $(OBJ)
+all:		${NAME}
 
-bonus: $(OBJ_B)
-	ar rcs $(NAME) $(OBJ_B)
+bonus:		${OBJS_B}
+			${CC} -c ${SRCS_B}
+			${AR} ${RC} ${NAME} ${OBJS_B}
+clean:
+			${RM} ${OBJS} $(OBJS_B)
+
+fclean:		clean
+			${RM} ${NAME}
+
+re:			fclean all
 
 so:
-	gcc -shared -o libft.so *.c
-
-$(OBJ_B): $(SRC_B)
-	gcc $(FLAGS) -c $(SRC_B)
-
-clean:
-	rm -f $(OBJ) $(OBJ_B)
-
-fclean: clean
-	rm -f $(NAME) $(OBJ) $(OBJ_B)
-
-re: fclean all bonus
-
-.PHONY: all bonus clean fclean re
+	$(CC) -nostartfiles -c -fPIC $(CFLAGS) $(SRCS) $(SRCS_B)
+	gcc -nostartfiles -shared -o ${NAME_UX} $(OBJS) $(OBJS_B)

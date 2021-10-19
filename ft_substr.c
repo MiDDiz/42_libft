@@ -11,23 +11,24 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include "stdio.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*new_str;
 	char	*str_ptr;
 	char	*new_ptr;
-	size_t	str_len;
+	size_t	orig_str_len;
 
-	str_len = ft_strlen(s);
-	if (start >= str_len)
+	orig_str_len = ft_strlen(s);
+	if (start >= orig_str_len)
 		return (ft_strdup(""));
-	if (len > str_len)
-		len = str_len;
+	str_ptr = (char *)&s[start];
+	if (len > ft_strlen(str_ptr))
+		len = ft_strlen(str_ptr);
 	new_str = (char *)malloc(sizeof(char) * (len + 1));
 	if (!new_str)
 		return (NULL);
-	str_ptr = (char *)&s[start];
 	new_ptr = new_str;
 	while (len-- && *str_ptr)
 		*new_ptr++ = *str_ptr++;
