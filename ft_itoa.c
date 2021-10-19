@@ -62,8 +62,6 @@ int check_size(int n)
 		n = n / 10;
 		size++;
 	}
-	// 214748364710
-	printf("Size: %d\n", size);
 	return (size);
 }
 
