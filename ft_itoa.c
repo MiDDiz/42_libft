@@ -12,11 +12,11 @@
 
 #include "libft.h"
 #include "stdio.h"
+
 /*
  * We need to cat with size + 2 in order to accomodate space for
  * the new character and the null terminator of strlcat ^_^.
 */
-
 
 static void	ft_itoa_rec(int n, char *str)
 {
@@ -45,9 +45,9 @@ static void	ft_itoa_rec(int n, char *str)
 	}
 }
 
-int check_size(int n)
+int	check_size(int n)
 {
-	int size;
+	int	size;
 
 	size = 1;
 	if (n == -2147483648)
@@ -57,7 +57,7 @@ int check_size(int n)
 		size++;
 		n *= -1;
 	}
-	while(n > 10)
+	while (n >= 10)
 	{
 		n = n / 10;
 		size++;

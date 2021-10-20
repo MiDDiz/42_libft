@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-static size_t ft_wcount(char *str, char c)
+static size_t	ft_wcount(char *str, char c)
 {
 	size_t	wcount;
 
@@ -30,7 +30,7 @@ static size_t ft_wcount(char *str, char c)
 	return (wcount);
 }
 
-static void ft_splitter(char **table, char const *str, char c, size_t c_word)
+static void	ft_splitter(char **table, char const *str, char c, size_t c_word)
 {
 	int	i_str;
 	int	i_word;
@@ -58,13 +58,13 @@ static void ft_splitter(char **table, char const *str, char c, size_t c_word)
 
 char	**ft_split(const char *str, char s)
 {
-    char    **str_table;
-    size_t  c_words;
+	char	**str_table;
+	size_t	c_words;
 
-    c_words = ft_wcount((char *)str, s);
-    str_table = (char **)malloc(sizeof(char *) * (c_words + 1));
-    if (!str_table)
-        return (NULL);
-    ft_splitter(str_table, str, s, c_words);
-    return (str_table);
+	c_words = ft_wcount((char *)str, s);
+	str_table = (char **)malloc(sizeof(char *) * (c_words + 1));
+	if (!str_table)
+		return (NULL);
+	ft_splitter(str_table, str, s, c_words);
+	return (str_table);
 }

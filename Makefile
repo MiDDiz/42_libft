@@ -34,5 +34,5 @@ fclean:		clean
 re:			fclean all
 
 so:
-	$(CC) -nostartfiles -c -fPIC $(CFLAGS) $(SRCS) $(SRCS_B)
-	gcc -nostartfiles -shared -o ${NAME_UX} $(OBJS) $(OBJS_B)
+	$(CC) -c -fPIC $(CFLAGS) $(SRCS) $(SRCS_B)
+	gcc -shared -o ${NAME_UX} $(OBJS) $(OBJS_B)
