@@ -45,7 +45,7 @@ static void	ft_itoa_rec(int n, char *str)
 	}
 }
 
-int	check_size(int n)
+static int	check_size(int n)
 {
 	int	size;
 
