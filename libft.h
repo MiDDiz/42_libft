@@ -67,5 +67,5 @@ t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 char		*ft_utoa(unsigned int n);
 char		*ft_hextoa(size_t num);
-char		*ft_strupper(char *str)
+char		*ft_strupper(char *str);
 #endif
