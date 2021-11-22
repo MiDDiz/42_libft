@@ -15,11 +15,15 @@
 /*
  *	Uppers a string, modifying it.
 */
-void	ft_strupper(char *str)
+char	*ft_strupper(char *str)
 {
+	char	*str_ptr;
+
+	str_ptr = str;
 	while(*str)
 	{
 		*str = ft_toupper(*str);
 		str++;
 	}
+	return (str_ptr);
 }
