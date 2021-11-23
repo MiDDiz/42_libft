@@ -6,11 +6,15 @@
 /*   By: jnaftana <jnaftana@student.42madrid.es>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/21 17:51:47 by jnaftana          #+#    #+#             */
-/*   Updated: 2021/10/15 15:48:31 by jnaftana         ###   ########.fr       */
+/*   Updated: 2021/11/22 18:42:37 by jnaftana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+ * Dependencies: ft_strlen.c
+ */
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
@@ -34,30 +38,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	dst[dst_n + i] = '\0';
 	return (src_n + dst_n);
 }
-
-/*
-size_t	ft_strlcat(char *dest, const char *src, size_t size)
-{
-	size_t	dest_size;
-	size_t	index;
-
-	index = 0;
-	dest_size = 0;
-	while (*dest)
-	{
-		dest++;
-		dest_size++;
-	}
-	if (size != 0 && dest_size < size)
-	{
-		while (size - (dest_size + 1) > index)
-		{
-			dest[index] = src[index];
-			index++;
-		}
-		dest[index] = '\0';
-		return (dest_size + ft_strlen(src));
-	}
-	return (ft_strlen(src) + size);
-}
-*/

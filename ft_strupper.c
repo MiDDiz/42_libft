@@ -10,10 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "libft.h"
 
 /*
- *	Uppers a string, modifying it.
+ * Uppers a string, modifying it.
+ * Dependencies: ft_toupper.c
 */
 char	*ft_strupper(char *str)
 {

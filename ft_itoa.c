@@ -16,6 +16,7 @@
 /*
  * We need to cat with size + 2 in order to accomodate space for
  * the new character and the null terminator of strlcat ^_^.
+ * Dependencies: ft_strlcpy.c ft_strlcat.c ft_strlen.c ft_calloc.c ft_bzero.c
 */
 
 static void	ft_itoa_rec(int n, char *str)

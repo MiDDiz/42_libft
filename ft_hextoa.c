@@ -1,53 +1,56 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_utoa.c                                          :+:      :+:    :+:   */
+/*   ft_hextoa.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jnaftana <jnaftana@student.42madrid.es>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/16 17:46:03 by jnaftana          #+#    #+#             */
-/*   Updated: 2021/11/16 17:46:03 by jnaftana         ###   ########.fr       */
+/*   Created: 2021/11/22 13:24:19 by jnaftana          #+#    #+#             */
+/*   Updated: 2021/11/22 13:24:19 by jnaftana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "libft.h"
 
-static void	ft_utoa_rec(unsigned int n, char *str)
+/*
+ * Dependencies: ft_strlcat.c ft_strlen.c ft_calloc.c ft_bzero.c
+ */
+
+static void	ft_hextoa_rec(size_t num, char *str, char* dict)
 {
-	char	c;
-
-	if (n >= 10)
+	if (num >= 16)
 	{
-		ft_utoa_rec(n / 10, str);
-		n = n % 10;
+		ft_hextoa_rec(num / 16, str, dict);
+		num = num % 16;
 	}
-	if (n < 10)
+	if (num < 10)
 	{
-		c = (char)(n + 48);
-		ft_strlcat(str, &c, ft_strlen(str) + 2);
+		ft_strlcat(str, &dict[num], ft_strlen(str) + 2);
 	}
 }
 
-static int	check_size(unsigned int n)
+static int	check_size(size_t num)
 {
 	int	size;
 
 	size = 1;
-	while (n >= 10)
+	while (num >= 16)
 	{
-		n = n / 10;
+		num = num / 16;
 		size++;
 	}
 	return (size);
 }
 
-char*	ft_utoa(unsigned int n)
+char	*ft_hextoa(size_t num)
 {
+	char	*dict;
 	char	*str;
 
-	str = ft_calloc(check_size(n) + 1, 1);
+	dict = "0123456789abcdef";
+	str = ft_calloc(check_size(num) + 1, 1);
 	if (!str)
 		return (NULL);
-	ft_utoa_rec(n, str);
-	return (str);
+	ft_hextoa_rec(num, str, dict);
+	return(str);
 }
