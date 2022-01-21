@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-
 /*
  * Dependencies: ft_strlcat.c ft_strlen.c ft_calloc.c ft_bzero.c
  */
@@ -23,9 +22,9 @@ static void	ft_hextoa_rec(size_t num, char *str, char* dict)
 		ft_hextoa_rec(num / 16, str, dict);
 		num = num % 16;
 	}
-	if (num < 10)
+	if (num < 16)
 	{
-		ft_strlcat(str, &dict[num], ft_strlen(str) + 2);
+		ft_strlcat(str, &(dict[num]), ft_strlen(str) + 2);
 	}
 }
 
