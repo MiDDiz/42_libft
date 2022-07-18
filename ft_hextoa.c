@@ -11,11 +11,12 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+
 /*
  * Dependencies: ft_strlcat.c ft_strlen.c ft_calloc.c ft_bzero.c
  */
 
-static void	ft_hextoa_rec(size_t num, char *str, char* dict)
+static void	ft_hextoa_rec(size_t num, char *str, char *dict)
 {
 	if (num >= 16)
 	{
@@ -51,5 +52,5 @@ char	*ft_hextoa(size_t num)
 	if (!str)
 		return (NULL);
 	ft_hextoa_rec(num, str, dict);
-	return(str);
+	return (str);
 }

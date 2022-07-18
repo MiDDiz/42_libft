@@ -44,7 +44,7 @@ static int	check_size(unsigned int n)
 	return (size);
 }
 
-char*	ft_utoa(unsigned int n)
+char	*ft_utoa(unsigned int n)
 {
 	char	*str;
 

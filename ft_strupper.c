@@ -21,7 +21,7 @@ char	*ft_strupper(char *str)
 	char	*str_ptr;
 
 	str_ptr = str;
-	while(*str)
+	while (*str)
 	{
 		*str = ft_toupper(*str);
 		str++;

@@ -35,9 +35,9 @@ static void	ft_splitter(char **table, char const *str, char c, size_t c_word)
 	int	i_str;
 	int	i_word;
 	int	i_char;
-	int	i_new_Str;
+	int	i_new_str;
 
-	i_new_Str = 0;
+	i_new_str = 0;
 	i_str = 0;
 	while (c_word--)
 	{
@@ -46,14 +46,14 @@ static void	ft_splitter(char **table, char const *str, char c, size_t c_word)
 		i_word = i_str;
 		while (str[i_str] != c && str[i_str])
 			i_str++;
-		table[i_new_Str] = (char *)malloc(sizeof(char) * (i_str - i_word + 1));
+		table[i_new_str] = (char *)malloc(sizeof(char) * (i_str - i_word + 1));
 		i_char = 0;
 		while (i_word < i_str)
-			table[i_new_Str][i_char++] = str[i_word++];
-		table[i_new_Str][i_char] = '\0';
-		i_new_Str++;
+			table[i_new_str][i_char++] = str[i_word++];
+		table[i_new_str][i_char] = '\0';
+		i_new_str++;
 	}
-	table[i_new_Str] = NULL;
+	table[i_new_str] = NULL;
 }
 
 char	**ft_split(const char *str, char s)
